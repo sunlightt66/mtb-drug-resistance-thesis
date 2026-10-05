@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>GRANDE-Based Multi-Drug Resistance Prediction | Master's Thesis</title>
+    
+    <meta
+        name="description"
+        content="Master's thesis project on genomic machine learning for multi-drug resistance prediction in Mycobacterium tuberculosis."
+    >
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- =========================
+         Navigation
+    ========================== -->
+    <nav>
+        <div class="nav-container">
+            <a href="#home" class="nav-title">Master's Thesis</a>
+
+            <div class="nav-links">
+                <a href="#overview">Overview</a>
+                <a href="#background">Background</a>
+                <a href="#method">Method</a>
+                <a href="#experiments">Experiments</a>
+                <a href="#results">Results</a>
+                <a href="#resources">Resources</a>
+            </div>
+        </div>
+    </nav>
+
+
+    <!-- =========================
+         Hero
+    ========================== -->
+    <header id="home" class="hero">
+
+        <div class="hero-content">
+
+            <p class="status">MASTER'S THESIS · RESEARCH IN PROGRESS</p>
+
+            <h1>
+                GRANDE-Based Multi-Drug Resistance Prediction
+                in <em>Mycobacterium tuberculosis</em>
+                Using Whole-Genome Variant Information
+            </h1>
+
+            <p class="hero-description">
+                Development and evaluation of machine learning approaches
+                for predicting resistance to multiple anti-tuberculosis drugs
+                from whole-genome sequencing-derived genomic variation.
+            </p>
+
+            <div class="hero-meta">
+                <span>Pusan National University</span>
+                <span>Department of Information Convergence Engineering</span>
+                <span>2026–2027</span>
+            </div>
+
+        </div>
+
+    </header>
+
+
+    <main>
+
+        <!-- =========================
+             Overview
+        ========================== -->
+        <section id="overview">
+
+            <p class="section-label">01 · OVERVIEW</p>
+            <h2>Research Overview</h2>
+
+            <p>
+                Drug-resistant tuberculosis remains a major challenge for
+                effective tuberculosis treatment. Whole-genome sequencing
+                provides detailed information about genomic variants in
+                <em>Mycobacterium tuberculosis</em> and creates opportunities
+                for computational prediction of antimicrobial resistance.
+            </p>
+
+            <p>
+                This research investigates machine learning approaches for
+                predicting resistance to multiple anti-tuberculosis drugs
+                using genomic variant information derived from whole-genome
+                sequencing data.
+            </p>
+
+            <div class="research-flow">
+
+                <div class="flow-item">
+                    <strong>01</strong>
+                    <span>Whole-Genome Sequencing</span>
+                </div>
+
+                <div class="flow-arrow">→</div>
+
+                <div class="flow-item">
+                    <strong>02</strong>
+                    <span>Genomic Variant Representation</span>
+                </div>
+
+                <div class="flow-arrow">→</div>
+
+                <div class="flow-item">
+                    <strong>03</strong>
+                    <span>Machine Learning</span>
+                </div>
+
+                <div class="flow-arrow">→</div>
+
+                <div class="flow-item">
+                    <strong>04</strong>
+                    <span>Drug Resistance Prediction</span>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             Background
+        ========================== -->
+        <section id="background">
+
+            <p class="section-label">02 · BACKGROUND</p>
+            <h2>Background & Motivation</h2>
+
+            <p>
+                Phenotypic drug susceptibility testing is essential for
+                determining tuberculosis treatment options, but genomic
+                prediction provides an opportunity to complement conventional
+                testing with rapid computational analysis.
+            </p>
+
+            <p>
+                Many resistance prediction approaches consider individual
+                drugs independently or represent genomic variation primarily
+                through the presence or absence of mutations. However,
+                resistance phenotypes across different drugs may contain
+                related information, while genomic variants can also be
+                represented using additional quantitative and contextual
+                information.
+            </p>
+
+            <p>
+                This study explores how genomic representations and machine
+                learning strategies can be designed to improve simultaneous
+                prediction of resistance across multiple anti-tuberculosis
+                drugs.
+            </p>
+
+        </section>
+
+
+        <!-- =========================
+             Objectives
+        ========================== -->
+        <section id="objectives">
+
+            <p class="section-label">03 · OBJECTIVES</p>
+            <h2>Research Objectives</h2>
+
+            <div class="card-grid">
+
+                <div class="card">
+                    <span class="card-number">01</span>
+                    <h3>Genomic Representation</h3>
+                    <p>
+                        Investigate representations of genomic variation
+                        derived from whole-genome sequencing data.
+                    </p>
+                </div>
+
+                <div class="card">
+                    <span class="card-number">02</span>
+                    <h3>Multi-Drug Prediction</h3>
+                    <p>
+                        Develop models capable of predicting resistance
+                        across multiple anti-tuberculosis drugs.
+                    </p>
+                </div>
+
+                <div class="card">
+                    <span class="card-number">03</span>
+                    <h3>Model Evaluation</h3>
+                    <p>
+                        Systematically evaluate predictive performance
+                        using consistent data partitions and evaluation
+                        metrics.
+                    </p>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             Dataset
+        ========================== -->
+        <section id="dataset">
+
+            <p class="section-label">04 · DATASET</p>
+            <h2>Study Dataset</h2>
+
+            <div class="progress-box">
+
+                <span class="progress-tag">IN PROGRESS</span>
+
+                <p>
+                    Dataset preparation and quality control are currently
+                    ongoing. The final study cohort will contain public
+                    <em>Mycobacterium tuberculosis</em> whole-genome
+                    sequencing samples with available drug susceptibility
+                    phenotypes.
+                </p>
+
+                <p>
+                    Final cohort characteristics, phenotype distributions,
+                    genomic feature counts, and included drugs will be
+                    reported here after dataset construction is completed.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             Method
+        ========================== -->
+        <section id="method">
+
+            <p class="section-label">05 · METHOD</p>
+            <h2>Methodology</h2>
+
+            <p>
+                The study evaluates machine learning models using genomic
+                features derived from whole-genome sequencing data. The
+                experimental framework is designed to compare different
+                genomic representations and learning strategies under
+                consistent evaluation settings.
+            </p>
+
+            <div class="method-pipeline">
+
+                <div>
+                    <span>STEP 01</span>
+                    <h3>Genomic Data</h3>
+                    <p>Whole-genome sequencing-derived variant information</p>
+                </div>
+
+                <div>
+                    <span>STEP 02</span>
+                    <h3>Representation</h3>
+                    <p>Construction of genomic features for machine learning</p>
+                </div>
+
+                <div>
+                    <span>STEP 03</span>
+                    <h3>Modeling</h3>
+                    <p>Single-task and multi-task learning strategies</p>
+                </div>
+
+                <div>
+                    <span>STEP 04</span>
+                    <h3>Evaluation</h3>
+                    <p>Drug-specific resistance prediction performance</p>
+                </div>
+
+            </div>
+
+            <p class="note">
+                The final model architecture is currently under development
+                and will be updated as the study progresses.
+            </p>
+
+        </section>
+
+
+        <!-- =========================
+             Experiments
+        ========================== -->
+        <section id="experiments">
+
+            <p class="section-label">06 · EXPERIMENTS</p>
+            <h2>Experimental Design</h2>
+
+            <p>
+                Experiments are designed to evaluate different approaches
+                to genomic representation and resistance prediction while
+                maintaining consistent training and evaluation conditions.
+            </p>
+
+            <p>
+                Model performance will be assessed separately for each
+                anti-tuberculosis drug using cross-validation and appropriate
+                classification metrics.
+            </p>
+
+            <div class="coming-soon">
+                Experimental configuration will be updated after completion
+                of the final dataset and model experiments.
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             Results
+        ========================== -->
+        <section id="results">
+
+            <p class="section-label">07 · RESULTS</p>
+            <h2>Results</h2>
+
+            <div class="results-placeholder">
+
+                <span>RESULTS IN PROGRESS</span>
+
+                <p>
+                    Final experimental results and comparative analyses
+                    will be added as the study progresses.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             Publications & Resources
+        ========================== -->
+        <section id="resources">
+
+            <p class="section-label">08 · RESOURCES</p>
+            <h2>Publications & Resources</h2>
+
+            <div class="resource-list">
+
+                <div class="resource-item">
+                    <span>Thesis</span>
+                    <strong>Coming soon</strong>
+                </div>
+
+                <div class="resource-item">
+                    <span>Source Code</span>
+                    <strong>Coming soon</strong>
+                </div>
+
+                <div class="resource-item">
+                    <span>Presentation</span>
+                    <strong>Coming soon</strong>
+                </div>
+
+                <div class="resource-item">
+                    <span>Testing Data</span>
+                    <strong>Coming soon</strong>
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- =========================
+         Footer
+    ========================== -->
+    <footer>
+
+        <p>
+            Master's Thesis Project · Pusan National University
+        </p>
+
+        <p>
+            Department of Information Convergence Engineering
+        </p>
+
+    </footer>
+
+</body>
+</html>
